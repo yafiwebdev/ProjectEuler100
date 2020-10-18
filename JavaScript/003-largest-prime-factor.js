@@ -65,6 +65,6 @@ function largestPrimeFactor(number) {
 	return result;
 } 
 
-largestPrimeFactor(13195);
+largestPrimeFactor(13195); 
 */
 
