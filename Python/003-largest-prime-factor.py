@@ -1,3 +1,9 @@
+"""
+	The prime factors of 13195 are 5, 7, 13 and 29.
+
+	What is the largest prime factor of the given number? 
+"""
+
 def largestPrimeFactor(number):
 	# Make a copy of the original number to manipulate it by dividing it by prime factors
 	currentNum = number
@@ -20,4 +26,5 @@ def largestPrimeFactor(number):
 	return result
 
 
-largestPrimeFactor(13195)
+result = largestPrimeFactor(13195)
+print(result)
