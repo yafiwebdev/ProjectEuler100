@@ -14,15 +14,14 @@ function largestPrimeFactor(number) {
 	// Keep going until the number has been divided by all factors and is 1
 	while(currentNum > 1) {
 
-		// Check whether the number is divisible by the current "i" value
+		// Check whether the number is divisible by the current "i" value, if yes, then "i" is a prime factor
 		if(currentNum % i == 0) {
 
 			currentNum /= i; // Update the current number by dividing it by the current factor "i"
 			result = i; // Set to the current prime factor, which is until now the largest, but could be overwritten by the next, larger, factor
 			// Don't change the counter, because the new number could also be divisible by it
 		} else {
-			// Increment if the current number isn't divisible by the factor any more (or if it's not even a prime factor)
-			i++;
+			i++; // Increment if the current number isn't divisible by the factor any more (or if it's not even a prime factor)
 		}
 
 	}
