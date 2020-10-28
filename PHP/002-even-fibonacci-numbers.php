@@ -32,5 +32,4 @@ function fiboEvenSum($number) {
 	return $total;
 }
 
-fiboEvenSum(10);
-  
+echo fiboEvenSum(10);
