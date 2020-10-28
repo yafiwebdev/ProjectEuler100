@@ -16,7 +16,7 @@ namespace ProjectEuler
         {
             long sum = 0;
 
-            for (int i = 0; i < limit - 1; i++)
+            for (int i = 0; i < limit; i++)
             {
                 if (i % 3 == 0 || i % 5 == 0)
                     sum += i;
