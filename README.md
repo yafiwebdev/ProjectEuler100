@@ -5,10 +5,16 @@ I love working on algorithms every now and then, and this challenge is a very ni
 So, I am really excited to join the others and embark on this journey, powered by great motivation to be a bit better every day.
 Why not join us?
 
-## Languages Used
+## Main Languages Used (by owner)
 - JavaScript
 - PHP
 - Python
+
+## Other Languages (contributers)
+- Ruby
+- Java
+- C#
+- Go
 
 ## Contributing to this repository
 I started this repo for my personal use to document my own solutions, but feel free to contribute and add your solutions in **other** programming languages.
