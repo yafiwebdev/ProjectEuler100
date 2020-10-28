@@ -3,7 +3,7 @@ https://projecteuler.net/problem=3
 =end
 
 def largestPrimeFactor(n)
-    for j in 2..Math.sqrt(n)
+    for j in 2..Math.sqrt(n).floor()
         if n % j == 0
             $counter = 0
             while n % j == 0 do
