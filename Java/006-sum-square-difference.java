@@ -8,8 +8,6 @@
 	Find the difference between the sum of the squares of the first n natural numbers and the square of the sum.
 */
 
-
-
 public class Problem_6_Sum_Square_Difference {
 
   static void Calc_Diff(int n) {
@@ -23,16 +21,11 @@ public class Problem_6_Sum_Square_Difference {
   difference = (int)Math.pow(sum, 2) - sumSquares;
   System.out.println(difference);
 
-
-
 }
-
 
     public static void main (String[] args) {
 
-
-        Calc_Diff(args[0]);
-
+        Calc_Diff(100);
 
     }
 }
