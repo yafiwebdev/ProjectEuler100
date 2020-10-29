@@ -1,5 +1,5 @@
 //Project Euler Problem 6
-/* 
+/*
 	The sum of the squares of the first ten natural numbers is,
 	1² + 2² + ... + 10² = 385
 	The square of the sum of the first ten natural numbers is,
@@ -12,19 +12,27 @@
 
 public class Problem_6_Sum_Square_Difference {
 
-    
-        
-    public static void main (String[] args) {
-                
-        int sumSquares = 0, sum = 0, difference = 0;
-                
-        for (int i = 1; i <= 100; i++) {
-            sum += i;
-            sumSquares += (int)Math.pow(i, 2);
-        }
-                
-        difference = (int)Math.pow(sum, 2) - sumSquares;
-        System.out.println(difference);
-    }
+  static void Calc_Diff(int n) {
+    int sumSquares = 0, sum = 0, difference = 0;
+
+  for (int i = 1; i <= n; i++) {
+      sum += i;
+      sumSquares += (int)Math.pow(i, 2);
+  }
+
+  difference = (int)Math.pow(sum, 2) - sumSquares;
+  System.out.println(difference);
+
+
+
 }
 
+
+    public static void main (String[] args) {
+
+
+        Calc_Diff(args[0]);
+
+
+    }
+}
