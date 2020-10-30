@@ -15,8 +15,7 @@ def multiplesOf3and5(number)
 		end
 		num += 1
 	end
-
-	return sum
+	sum
 end
 
 puts multiplesOf3and5(1000);
