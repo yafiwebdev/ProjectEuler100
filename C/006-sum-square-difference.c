@@ -3,7 +3,7 @@
 
 int main()
 {
-    int n=100, sumSqr=0, sqrSum = 0, sum=0, result=0;
+    int n=100, sumSqr=0, sqrSum = 0, sum=0;
     if(n<=0){
     printf("Invalid value of n");
     }
@@ -16,9 +16,10 @@ int main()
             }
             //The square of the sum 
             sqrSum = pow(sum,2);
-            result = sqrSum-sumSqr;
+            int result = sqrSum-sumSqr;
+
+	    printf("Result = %d\n", result);
        }
-	printf("Result = %d\n", result);
 
     return 0;
 }
