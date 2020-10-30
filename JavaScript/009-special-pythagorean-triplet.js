@@ -10,7 +10,7 @@ function isPythagoreanTriple(a, b, c) {
 
 function specialTriplet() {
   for (let a=1; a<332; a++) {
-    for (let b=a+1; b<333; b++) {
+    for (let b=a+1; b<499; b++) {
       const c = 1000 - b - a
       if (isPythagoreanTriple(a, b, c)) { return a*b*c }
       // optimization - w/ this a, if this b already makes c too small,
