@@ -21,8 +21,10 @@ class LongestCollatz {
     int res = 0;
 
     LinkedList<Long> list = new LinkedList<Long>();
-
-    for(int j = 10; j < 1000000; j++){
+    
+    long input = 1000000
+    
+    for(int j = 10; j < input; j++){
       long i = j;
       while(i != 1){
         if(i % 2 == 0){
@@ -41,7 +43,8 @@ class LongestCollatz {
     }
 
     long end = System.currentTimeMillis();
-    System.out.println(res + "chain size: " + longest);
+    System.out.println("Result: " + res);
+    System.out.println("Chain size: " + longest);
     System.out.println(end-begin + "ms");
 
   }
