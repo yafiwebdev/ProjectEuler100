@@ -35,4 +35,6 @@ int main(){
             result += i;  // Summing up all values that satisfies required condition
         }
     }
+
     cout << "The sum is: " << result;
+}
