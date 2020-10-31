@@ -17,7 +17,10 @@ Why not join us?
 - C
 - C++
 - C#
+- Dart
+- Rust
 - Scala
+- Groovy
 
 ## Contributing to this repository
 I started this repo for my personal use to document my own solutions, but feel free to contribute and add your solutions in **other** programming languages.
