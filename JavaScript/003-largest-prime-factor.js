@@ -12,8 +12,8 @@ function largestPrimeFactor(number) {
 	    numSqrt = Math.floor(Math.sqrt(number)), // Square root of the number to use to check if number is prime
 	    i = 2;
 
-	// Keep going until the number has been divided by all factors and is 1
-	while(currentNum > 1 && i <= numSqrt) {
+	// Keep going until we check against the number's square root, it's sufficient to check up to it to know whether number is prime
+	while(i <= numSqrt) {
 
 		// Check whether the number is divisible by the current "i" value, if yes, then "i" is a prime factor
 		if(currentNum % i == 0) {
