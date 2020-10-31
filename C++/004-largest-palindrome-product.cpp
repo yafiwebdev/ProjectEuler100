@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
+
 using namespace std;
+
 bool checkpalindrome(int x){
     int fwd = x, rev = 0;
 
@@ -20,18 +22,22 @@ bool checkpalindrome(int x){
 
     return true;
 }
+
 int main(){
     int maxpal = 0;
-
+    int dig = 3;
+    int upbnd = pow(10, dig) - 1;
+    int lobnd = pow(10, dig - 1);
+    
     //loop through all 3 digit pair
-    for(int i = 999; i >= 100; i--){
-        for(int j = i; j >= 100; j--){
+    for(int i = upbnd; i >= lobnd; i--){
+        for(int j = i; j >= lobnd; j--){
 
             //find max palindrome
             if(checkpalindrome(i*j)){
                 maxpal = max(maxpal, i*j);
             }
-            
+
         }
     }
     cout << maxpal << endl;
