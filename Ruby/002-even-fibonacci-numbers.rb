@@ -4,20 +4,19 @@
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed n, find the sum of the even-valued terms.
 
-def fiboEvenSum(number)
+def fibo_even_sum(number)
 	sum = 0
-	previousDigit = 1
-	fiboDigit = 0;
+	previous_digit = 1
+	fibo_digit = 0;
 
-	while fiboDigit < number
-		temp = fiboDigit
-		fiboDigit += previousDigit
-		previousDigit = temp
-		if fiboDigit % 2 == 0
-			sum += fiboDigit 
-		end
+	while fibo_digit < number
+		temp = fibo_digit
+		fibo_digit += previous_digit
+		previous_digit = temp
+		
+		sum += fibo_digit if fibo_digit % 2 == 0
 	end 
 	sum
 end
 
-puts fiboEvenSum(4000000)
+puts fibo_even_sum(4000000)
