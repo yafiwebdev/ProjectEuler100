@@ -22,17 +22,17 @@ int factorial(int x) {
 
 int main(){
     int result = 0;
-    for(int i = 10; i < 2540161; i++){  
+    for(int i = 10; i < 2540161; i++){
         int sumOfFacts = 0;
-        int number = i;
+        int number = i;  //Taking a copy before passing it into while loop.
         while (number > 0) {
-            int d = number % 10;
+            int d = number % 10;  //Get every single digits from the number
             number /= 10;
-            sumOfFacts += factorial(d);
+            sumOfFacts += factorial(d);  //Calculates factorial of seperate digits of a number and sums it up
         }
         if (sumOfFacts == i) {
+            cout << i << endl;
             result += i;  // Summing up all values that satisfies required condition
         }
     }
-    cout << result;
-}
+    cout << "The sum is: " << result;
