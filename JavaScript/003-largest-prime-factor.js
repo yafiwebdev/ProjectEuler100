@@ -8,11 +8,12 @@ function largestPrimeFactor(number) {
 
 	// Make a copy of the original number to manipulate it by dividing it by prime factors
 	let currentNum = number,
-		i = 2,
-		result;
+	    result = number, // Set initial result to number, in case it is itself a prime
+	    numSqrt = Math.floor(Math.sqrt(number)), // Square root of the number to use to check if number is prime
+	    i = 2;
 
 	// Keep going until the number has been divided by all factors and is 1
-	while(currentNum > 1) {
+	while(currentNum > 1 && i <= numSqrt) {
 
 		// Check whether the number is divisible by the current "i" value, if yes, then "i" is a prime factor
 		if(currentNum % i == 0) {
