@@ -8,14 +8,14 @@ def pythagorean_triple?(a, b, c)
   a**2 + b**2 == c**2
 end
 
-def special_triplet
+def special_triplet(sum)
   a = 1
-  # if a + b + c === 1000 and a < b < c, a can't be > 332
-  while a < 332 do
+  # if a + b + c === sum and a < b < c, a can't be > sum / 3
+  while a < sum / 3 do
     b = a + 1
-    # same reasoning, b can't be > 499 if b < c
-    while b < 499 do
-      c = 1000 - b - a
+    # same reasoning, b can't be > sum / 2 if b < c
+    while b < sum / 2 do
+      c = sum - b - a
       return a*b*c if pythagorean_triple?(a, b, c)
       b += 1
     end
@@ -23,4 +23,4 @@ def special_triplet
   end
 end
 
-puts "special triplet is #{special_triplet}"
+puts "special triplet is #{special_triplet(1000)}"
