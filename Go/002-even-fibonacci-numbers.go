@@ -13,8 +13,10 @@ import (
 )
 
 func main() {
+	var input uint64 = 4000000
 	var a, b, sum uint64 = 1, 2, 2
-	for a+b < 4000000 {
+
+	for a+b < input {
 		next := a + b
 		//fmt.Println(next)
 		if next%2 == 0 {
