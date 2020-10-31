@@ -24,22 +24,22 @@ bool checkpalindrome(int x){
 }
 
 int main(){
-    int maxpal = 0;
-    int dig = 3;
-    int upbnd = pow(10, dig) - 1;
-    int lobnd = pow(10, dig - 1);
-    
+    int max_palindrome = 0;
+    int digit = 3;
+    int upper_bound = pow(10, digit) - 1;
+    int lower_bound = pow(10, digit - 1);
+
     //loop through all 3 digit pair
-    for(int i = upbnd; i >= lobnd; i--){
-        for(int j = i; j >= lobnd; j--){
+    for(int i = upper_bound; i >= lower_bound; i--){
+        for(int j = i; j >= lower_bound; j--){
 
             //find max palindrome
             if(checkpalindrome(i*j)){
-                maxpal = max(maxpal, i*j);
+                max_palindrome = max(max_palindrome, i*j);
             }
 
         }
     }
-    cout << maxpal << endl;
+    cout << max_palindrome << endl;
     return 0;
 }
