@@ -2,7 +2,38 @@
 #include <string>
 #include <vector>
 
+std::vector<std::string> get_input();
+
 int main() {
+    auto input = get_input();
+
+    std::vector<int> result{};
+    int sum{};
+    for (int n = input[0].length() - 1; n >= 0; n--) {
+        for (auto number : input) {
+            sum = sum + std::stoi(number.substr(n, 1));
+        }
+        result.push_back(sum % 10);
+        sum /= 10;
+    }
+
+    while (sum) {
+        result.push_back(sum % 10);
+        sum /= 10;
+    }
+
+    int digit = 0;
+    for (auto it = result.rbegin(); digit < 10; it++) {
+        std::cout << *it;
+        digit++;
+    }
+    std::cout << std::endl;
+
+    // 5537376230
+    return 0;
+}
+
+std::vector<std::string> get_input() {
     std::vector<std::string> input{};
     input.push_back("37107287533902102798797998220837590246510135740250");
     input.push_back("46376937677490009712648124896970078050417018260538");
@@ -105,28 +136,5 @@ int main() {
     input.push_back("20849603980134001723930671666823555245252804609722");
     input.push_back("53503534226472524250874054075591789781264330331690");
 
-    std::vector<int> result{};
-    int sum{};
-    for (int n = input[0].length() - 1; n >= 0; n--) {
-        for (auto number : input) {
-            sum = sum + std::stoi(number.substr(n, 1));
-        }
-        result.push_back(sum % 10);
-        sum /= 10;
-    }
-
-    while (sum) {
-        result.push_back(sum % 10);
-        sum /= 10;
-    }
-
-    int digit = 0;
-    for (auto it = result.rbegin(); digit < 10; it++) {
-        std::cout << *it;
-        digit++;
-    }
-    std::cout << std::endl;
-
-    // 5537376230
-    return 0;
+    return input;
 }
