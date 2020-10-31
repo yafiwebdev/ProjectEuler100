@@ -14,7 +14,7 @@ def special_triplet
     b = a + 1
     while b < 499 do
       c = 1000 - b - a
-      return [a,b,c] if pythagorean_triple?(a, b, c)
+      return a*b*c if pythagorean_triple?(a, b, c)
       b += 1
     end
     a += 1
