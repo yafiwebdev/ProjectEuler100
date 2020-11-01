@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
 
 /*
 	https://projecteuler.net/problem=4
@@ -56,11 +58,12 @@ int getLargestNthDigitPalindromeProduct(int n){
     char* max = (char*)malloc((n+1) * sizeof(char));
     int largestFound = -1;
     int minNum = pow(10,n - 1);
-    while(n){
+    int counter = n;
+    while(counter){
         strcat(max, "9");
-        n--;
+        counter--;
     }
-    const maxNum = atoi(max);
+    int maxNum = atoi(max);
     for (int i = maxNum; i >= minNum; i--){
         for (int j = maxNum; j >= minNum; j--){
             int prod = i * j;
@@ -69,12 +72,11 @@ int getLargestNthDigitPalindromeProduct(int n){
             }
         }
     }
-    printf("Largest found palindrome number [%d] for %d digit numbers \n.", largestFound, n);
+    printf("Largest found palindrome product for %d digit numbers is [%d].", n, largestFound);
     return largestFound;
 }
 
-int main()
-{   
+int main(){   
     int result = getLargestNthDigitPalindromeProduct(3);
     return 0;
 }
