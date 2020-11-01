@@ -9,20 +9,9 @@ main() {
 int sumOfAllMultiplesOfThreeOrFive(int max) {
   int sum = 0;
   for (var number = 1; number < max; number++) {
-    if (_isDivisibleByFive(number) || _isDivisibleByThree(number)) {
+    if (number % 5 == 0 || number % 3 == 0) {
       sum += number;
     }
   }
   return sum;
-}
-
-/// Verifies if the given number is divisible by five
-bool _isDivisibleByFive(final int number) {
-  final lastDigit = (number % 10);
-  return lastDigit == 0 || lastDigit == 5;
-}
-
-/// Verifies if the given number is divisible by three
-bool _isDivisibleByThree(int number) {
-  return number % 3 == 0;
 }
