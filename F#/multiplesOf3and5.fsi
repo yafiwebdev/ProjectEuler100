@@ -5,13 +5,13 @@ Find the sum of all the multiples of 3 or 5 below the provided parameter value n
 
 module theFunction =
 let multiplesOf3and5 number =
-	let sum = 0
-	let num = 1
-	while num < number do
-		if num % 3 = 0 or num % 5 = 0
-			then sum = sum + num
-        else sum = sum + 0
-		num = num + 1
+let sum = 0
+let num = 1
+while num < number do
+if num % 3 = 0 or num % 5 = 0
+then sum = sum + num
+else sum = sum + 0
+num = num + 1
 return sum
 
 let result = multiplesOf3and5(1000)

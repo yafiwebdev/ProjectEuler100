@@ -5,16 +5,16 @@ By considering the terms in the Fibonacci sequence whose values do not exceed n,
 
 module fibEv =
 let fibEvenSum number =
-	let lastNum = 1
-	let currentNum = 2
-	let total = 0
-	while currentNum <= number do
-		if currentNum % 2 = 0
-			total = total + currentNum
-        else total = total + 0
-		tempCurrentNum = currentNum
-		currentNum = currentNum + lastNum
-		lastNum = tempCurrentNum
+let lastNum = 1
+let currentNum = 2
+let total = 0
+while currentNum <= number do
+if currentNum % 2 = 0
+total = total + currentNum
+else total = total + 0
+tempCurrentNum = currentNum
+currentNum = currentNum + lastNum
+lastNum = tempCurrentNum
 return total
 
 let result = fibEvenSum(10)
